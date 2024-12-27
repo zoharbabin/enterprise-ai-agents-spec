@@ -1,13 +1,3 @@
-Below is an **updated version** of the **Orchestration & Coordination Protocol** that:
-
-1. Introduces a new **Terminology & Definitions** section.  
-2. Incorporates **relevant diagrams** (using Mermaid in GitHub-Flavored Markdown).  
-3. Dives deeper into the **mechanisms of coordination and timing** (e.g., message-queue/event-based communications, avoiding single points of failure, and handling failed Agents).  
-
-All code fences for diagrams are provided in **Mermaid** syntax, which can be directly rendered on GitHub or in Mermaid-compatible editors.
-
----
-
 # **Orchestration & Coordination Protocol**
 
 ## 0. Terminology & Definitions
