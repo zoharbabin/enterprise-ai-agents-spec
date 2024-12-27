@@ -1,6 +1,7 @@
 # Collective: A Revitalized Manifesto
 
-> “In my little group chat with my tech CEO friends, there’s this betting pool for the first year that there is a one-person billion-dollar company. Which would have been unimaginable without AI and now will happen.”
+> “In my little group chat with my tech CEO friends, there’s this betting pool for the first year that there is a one-person billion-dollar company. Which would have been unimaginable without AI and now will happen.”  
+> — **Sam Altman**, CEO of OpenAI
 
 ---
 
