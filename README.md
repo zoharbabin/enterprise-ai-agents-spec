@@ -1,7 +1,3 @@
-Below is an updated **Collective Manifesto** that incorporates the new introduction and tensions you’ve provided, then continues with a cohesive roadmap, stakeholder benefits, challenges, core principles, and the open-source vision. Each section is crafted to align with the **autonomous swarm** concept and the goal of driving end-to-end product development via AI.
-
----
-
 # Collective: A Revitalized Manifesto
 
 > “In my little group chat with my tech CEO friends, there’s this betting pool for the first year that there is a one-person billion-dollar company. Which would have been unimaginable without AI and now will happen.”  
