@@ -8,6 +8,19 @@ As an **open-source** resource, this specification invites readers to review, pr
 
 Modern enterprise software development often involves numerous specialized roles. As a result, coordination processes become more complicated, approval chains multiply, and dependencies—sometimes unclear or overlapping—grow more intricate. This proposed specification document describes how a **Swarm of AI Agents** can assume these roles with **minimal human oversight**. This spec attempts to borrow from the common practices in product development teams, while considering ways to approach inefficiencies and potential new ways of working enabled by AI. 
 
+While many specialized AI Agents exist today (e.g., security researcher agents, developer agents, or QA agents), this document focuses primarily on the **meta-layer** of **orchestration** and **collaborative engagement** between these various Agent roles. The goal is to outline how large-scale AI swarms can effectively coordinate, share work items, maintain compliance, and communicate critical updates or escalations in an **enterprise-ready** environment.
+
+A single enterprise product typically involves multiple specialized roles—from **product ideation** and **UI/UX design** to **security auditing** and **DevOps**. Numerous implementations and toolkits already exist for each Agent role, often leveraging state-of-the-art LLMs, knowledge graphs, or external APIs to optimize their individual domains. However, orchestrating all these specialized Agents into a **holistic, compliant, and scalable** delivery pipeline demands a solid framework of protocols, message formats, escalation workflows, and automated checks.
+
+Accordingly, this specification aims to detail **how** to integrate these specialized Agents under a **unifying orchestration layer** that ensures:
+
+- **Reliability**: Clear rules for Agent collaboration, conflict resolution, and fallback mechanisms.  
+- **Scalability**: Smooth parallelization and dynamic resource allocation as new Agents join or tasks grow in complexity.  
+- **Compliance**: Embedded security, privacy, and audit mechanisms that apply uniformly across the swarm.  
+- **Accountability**: Immutable logs, threshold-based escalations, and human oversight points to handle risk or ethical concerns.
+
+By separating the **“meta” orchestration and collaboration protocols** from the **individual agent implementations**, this document aspires to serve as a **foundational framework**—one that any specialized Agent can plug into, ensuring end-to-end automation and compliance without sacrificing innovation in each Agent’s niche domain.
+
 **Minimal Human Oversight**  
 
 By delegating the majority of day-to-day tasks to AI Agents (each specialized in critical areas such as development, testing, security, and compliance) organizations gain **speed** (due to parallelized never-resting work and rapid decision-making) and **cost efficiency** (reduced manual overhead and fewer bottlenecks). Yet, safety and control remain paramount: **immutable logs** track every action, threshold-based **escalations** catch problems early, and **robust checks** (e.g., security scans, privacy audits, budget monitoring) continuously run in the background. Whenever a critical risk arises, the system automatically notifies the **Human Overseer** (or small human team) with the authority to pause, inspect, or intervene, striking the right balance between autonomous operation and strategic human oversight.
