@@ -6,13 +6,15 @@
 1. **Empowered Solo Founders or Small-Teams**  
    - Envision a scenario where **one person** can conceive a product, rely on Collective’s swarm for 90% of the heavy lifting, and reach market validation or even scale-up phase with minimal capital. This levels the playing field against established industry incumbents.
    - In small or medium-sized teams, the system **reduces overhead** from daily standups, manual QA routines, and DevOps chores. Freed from such drudgery, human members can channel their creativity into **innovating**, **refining** user experiences, and **testing** new market ideas.
-
 3. **Sustainable High-Velocity Engineering**  
    - By embedding compliance checks, ethical modules, and security best practices within the swarm, Collective ensures **quality doesn’t degrade** in the pursuit of speed. Projects evolve quickly without sacrificing the transparency and reliability needed for long-term success.
 
 AI Agents are poised to **redefine** how software is built, harnessing the relentless efficiency of AI-driven automation while preserving the **irreplaceable** qualities of human insight and empathy. By combining agent orchestration with learned best practices from human collaboration practices and open-source communities, it is possible to pave the way for a **responsible, high-velocity, reliable and compliant** product development that is 100% done by AI Agents. Enabling **anyone** with a vision to build extraordinary products at scale, all while upholding ethical standards, robust security, and a deep respect for user well-being.
 
-# Read the proposed specification document
+# **Read: [AI Agents in Enterprise Product Development: Proposed Specification](/ai-agents-ent-product-dev-spec.md)**.  
+
+This document is a **proposed specification** for implementing a Swarm of AI Agents in enterprise product development. It distills established best practices from human teams collaborating on the design, construction, deployment, and maintenance of enterprise software. Offered as a **practical blueprint** and **foundational baseline**, it aims to guide those who seek to understand and implement such AI-driven systems.  
+As an **open-source** resource, this specification invites readers to review, provide feedback, and suggest updates or extensions. I hope it serves as a comprehensive starting point for anyone interested in building **enterprise-ready product development AI agentic swarms**.
 
 ---
 
