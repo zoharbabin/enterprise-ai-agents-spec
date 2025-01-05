@@ -13,7 +13,7 @@ AI Agents are poised to **redefine** how software is built, harnessing the relen
 
 # **Read: [AI Agents in Enterprise Product Development: Proposed Specification](/ai-agents-ent-product-dev-spec.md)**.  
 
-This document is a **proposed specification** for implementing a Swarm of AI Agents in enterprise product development. It distills established best practices from human teams collaborating on the design, construction, deployment, and maintenance of enterprise software. Offered as a **practical blueprint** and **foundational baseline**, it aims to guide those who seek to understand and implement such AI-driven systems.  
+[AI Agents in Enterprise Product Development: Proposed Specification](/ai-agents-ent-product-dev-spec.md) is a **proposed specification** for implementing a Swarm of AI Agents in enterprise product development. It distills established best practices from human teams collaborating on the design, construction, deployment, and maintenance of enterprise software. Offered as a **practical blueprint** and **foundational baseline**, it aims to guide those who seek to understand and implement such AI-driven systems.  
 As an **open-source** resource, this specification invites readers to review, provide feedback, and suggest updates or extensions. I hope it serves as a comprehensive starting point for anyone interested in building **enterprise-ready product development AI agentic swarms**.
 
 ---
