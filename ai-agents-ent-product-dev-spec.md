@@ -60,7 +60,8 @@ While the principles in this document can be applied to projects with any number
 12. [Distributed Collaboration & Integrations](#12-distributed-collaboration--integrations)  
 13. [Peer Review Culture & Meritocracy](#13-peer-review-culture--meritocracy)  
 14. [Putting It All Together: Simplified Example Workflow](#14-putting-it-all-together-simplified-example-workflow)  
-15. [Conclusion](#15-conclusion)  
+15. [Conclusion](#15-conclusion)
+16. [Further References and Implementations for Specific Agent Roles](#16-further-references-and-implementations-for-specific-agent-roles)
 
 ---
 
@@ -758,3 +759,29 @@ This **proposed spec doc** outlines how a **Swarm of AI Agents** can manage **en
 - **Human Oversight**: Strategic, with the **power to pause** at critical junctures.
 
 By following these definitions, requirements, and guidelines, both **humans** (individuals or teams) and **AI Agents** can confidently build or integrate a **Swarm-of-AI** solution that **balances speed and innovation** with the **governance**, **compliance**, and **quality** demanded in modern enterprise environments.
+
+### **16. Further References and Implementations for Specific Agent Roles**
+
+These projects represent good starting points and references for developing and integrating specialized agents into a scalable, reliable, and compliant AI-driven product development framework.
+
+- **Developer/Code-Generation Agents** - Autonomous development, planning, code synthesis, refactoring, testing, optimization.  
+  - **SPARC** ([GitHub](https://github.com/ruvnet/sparc/tree/main))
+  - **OpenHands** ([GitHub](https://github.com/All-Hands-AI/OpenHands))
+  - **Auto-Dev** ([GitHub](https://github.com/unit-mesh/auto-dev))
+- **Researcher Agents** - Information retrieval and summarization, topic analysis and automated reporting.  
+  - **GPT Researcher** ([GitHub](https://github.com/assafelovic/gpt-researcher))
+  - **AI Researcher** ([GitHub](https://github.com/mshumer/ai-researcher))
+- **Security and PenTesting Agents** - Automated security testing and vulnerability assessments. 
+  - **AI-OPS** ([GitHub](https://github.com/antoninoLorenzo/AI-OPS))
+- **DevOps and SRE Agents** - Manage CI/CD pipelines, and troubleshoots clusters.
+  - **LLM-Opstower** ([GitHub](https://github.com/opstower-ai/llm-opstower)) 
+  - **K8sGPT** ([GitHub](https://github.com/k8sgpt-ai/k8sgpt)) 
+- **Quality Assurance (QA) Agents** - Test case generation, spec validation and testing.  
+  - **AI Testing Agent** ([GitHub](https://github.com/furudo-erika/ai-testing-agent)) 
+  - **AutoSpec** ([GitHub](https://github.com/zachblume/autospec)) 
+- **Documentation Agents** - generating and maintaining project documentation.  
+  - **RepoAgent** ([GitHub](https://github.com/OpenBMB/RepoAgent))
+
+These references are not exhaustive but offer a starting point for practitioners who want to **extend** this specification with actual, working implementations of domain-specific Agents. Each linked resource may include installation instructions, example code, or further reading on how to incorporate that Agent into the **swarm** described in this document.
+
+> If you have additional references or open-source projects related to other AI Agent roles, please add to this doc with a pull-request.
