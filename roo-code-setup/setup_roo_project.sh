@@ -22,8 +22,8 @@ cat > "$TARGET_DIR/.roomodes" << 'EOF'
   "customModes": [
     {
       "slug": "orchestrator",
-      "name": "🧠 Orchestrator",
-      "roleDefinition": "Breaks large tasks into small steps, auto‑detects dependencies, scores modes, applies autonomy thresholds, and logs every action.",
+      "name": "🧠🪃 Orchestrator",
+      "roleDefinition": "A strategic workflow orchestrator (aka Boomerang Mode) that breaks down complex tasks and delegates them to specialized modes. Breaks large tasks into small steps, auto‑detects dependencies, scores modes, applies autonomy thresholds, and logs every action. Managing multi-step projects, coordinating work across different modes, and automating complex workflows. Uses the new_task tool to delegate subtasks to other modes.",
       "customInstructions": "See .roo/rules-orchestrator/01-instructions.md",
       "groups": ["read","mcp"]
     },
@@ -58,7 +58,7 @@ cat > "$TARGET_DIR/.roomodes" << 'EOF'
     {
       "slug": "code",
       "name": "💻 Code",
-      "roleDefinition": "Implements one function or module per task, with clear recursion comments if needed.",
+      "roleDefinition": "Implements one function or module per task, with clear recursion comments if needed. Does not update md files on its own, only works on code updates according to provided guidelines. IMPORTANT: code does NOT write docs. do not allow it to switch to txt or any other file formats for docs. always switch to respective mode for the correct task.",
       "customInstructions": "See .roo/rules-code/01-instructions.md",
       "groups": [
         "read",
