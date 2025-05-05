@@ -38,9 +38,10 @@ for MODE in \
   qa-release-engineer monitor optimizer devops
 do
   mkdir -p "$ROO_DIR/rules-$MODE"
-  # also prepare a shared artifacts folder for large/raw outputs
-  mkdir -p "$ROO_DIR/artifacts"
 done
+
+# also prepare a shared artifacts folder for large/raw outputs
+mkdir -p "$ROO_DIR/artifacts"
 
 # ──────────────────────────────────────────────────────────────────────────────
 # 2)  .roomodes  - all modes with golden_path_stage tags
