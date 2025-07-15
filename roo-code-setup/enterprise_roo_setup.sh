@@ -12,11 +12,15 @@ ROOMODES_FILE="$TARGET_DIR/.roomodes.yaml"
 ROOIGNORE_FILE="$TARGET_DIR/.rooignore"
 README_FILE="$TARGET_DIR/README.md"
 
-# GitHub Configuration
-GITHUB_BASE_URL="https://raw.githubusercontent.com/zoharbabin/enterprise-ai-agents-spec/main/roo-code-setup"
-TEMPLATES_URL="$GITHUB_BASE_URL/templates"
-INSTRUCTIONS_URL="$GITHUB_BASE_URL/instruction-templates"
+# GitHub Configuration - Using GitHub Pages for immediate updates, raw.githubusercontent.com as fallback
+GITHUB_PAGES_URL="https://zoharbabin.github.io/enterprise-ai-agents-spec"
+GITHUB_RAW_URL="https://raw.githubusercontent.com/zoharbabin/enterprise-ai-agents-spec/main/roo-code-setup"
+TEMPLATES_URL="$GITHUB_PAGES_URL/templates"
+INSTRUCTIONS_URL="$GITHUB_PAGES_URL/instruction-templates"
 VERSION_URL="$INSTRUCTIONS_URL/version.json"
+# Fallback URLs for raw.githubusercontent.com
+TEMPLATES_URL_FALLBACK="$GITHUB_RAW_URL/templates"
+INSTRUCTIONS_URL_FALLBACK="$GITHUB_RAW_URL/instruction-templates"
 DOWNLOAD_TIMEOUT=30
 MAX_RETRIES=3
 RETRY_DELAY=2
@@ -281,21 +285,35 @@ test_network_connectivity() {
     return 1
   fi
   
-  # Test actual template repository URLs
+  # Test actual template repository URLs - GitHub Pages first, then raw.githubusercontent.com
   echo "🔍 Testing template repository connectivity..."
   local test_url="$TEMPLATES_URL/roomodes.yaml"
+  local fallback_url="$TEMPLATES_URL_FALLBACK/roomodes.yaml"
   
+  # Try GitHub Pages first (no caching issues)
   if curl -s --head --connect-timeout 10 --max-time 15 "$test_url" | grep -q "200 OK"; then
-    echo "✅ Template repository accessible"
+    echo "✅ Template repository accessible via GitHub Pages"
     return 0
-  elif curl -s --head --connect-timeout 10 --max-time 15 "$test_url" | grep -q "404"; then
+  fi
+  
+  # Try raw.githubusercontent.com as fallback
+  echo "🔄 Trying fallback URL..."
+  if curl -s --head --connect-timeout 10 --max-time 15 "$fallback_url" | grep -q "200 OK"; then
+    echo "✅ Template repository accessible via GitHub raw (fallback)"
+    # Update URLs to use fallback
+    TEMPLATES_URL="$TEMPLATES_URL_FALLBACK"
+    INSTRUCTIONS_URL="$INSTRUCTIONS_URL_FALLBACK"
+    return 0
+  elif curl -s --head --connect-timeout 10 --max-time 15 "$fallback_url" | grep -q "404"; then
     echo "❌ Template repository found but templates not available (404)"
-    echo "   Repository URL: $GITHUB_BASE_URL"
+    echo "   GitHub Pages URL: $GITHUB_PAGES_URL"
+    echo "   Fallback URL: $GITHUB_RAW_URL"
     echo "   This may indicate the repository structure has changed or templates are not yet published"
     return 2  # Special return code for 404 errors
   else
     echo "❌ Template repository connectivity failed"
-    echo "   Repository URL: $GITHUB_BASE_URL"
+    echo "   GitHub Pages URL: $GITHUB_PAGES_URL"
+    echo "   Fallback URL: $GITHUB_RAW_URL"
     return 1
   fi
 }
