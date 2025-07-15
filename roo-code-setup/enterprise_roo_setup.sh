@@ -3,7 +3,7 @@
 # Implements complete enterprise coordination with automatic mode switching, 
 # quality gates, and comprehensive enterprise mode set
 
-set -euo pipefail
+set -uo pipefail
 
 SCRIPT_VERSION="4.0.0"
 TARGET_DIR="${1:-.}"
