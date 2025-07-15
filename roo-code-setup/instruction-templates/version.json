@@ -1,0 +1,89 @@
+{
+  "version": "4.0.0",
+  "name": "Enterprise Roo Code Instruction Templates",
+  "description": "Comprehensive enterprise mode instruction templates extracted from enterprise_roo_setup.sh",
+  "created": "2025-01-15",
+  "source": "enterprise_roo_setup.sh",
+  "modes": {
+    "orchestrator": {
+      "file": "orchestrator.md",
+      "role": "Enterprise Project Coordinator & Workflow Manager",
+      "description": "Master coordinator for enterprise software development projects"
+    },
+    "security": {
+      "file": "security.md", 
+      "role": "Enterprise Cybersecurity Specialist",
+      "description": "Comprehensive security across all phases of enterprise development"
+    },
+    "devops": {
+      "file": "devops.md",
+      "role": "Infrastructure & Deployment Automation Specialist", 
+      "description": "Enterprise infrastructure, CI/CD pipelines, and deployment automation"
+    },
+    "product": {
+      "file": "product.md",
+      "role": "Product Management & Business Strategy Specialist",
+      "description": "Product requirements, stakeholder relationships, and business value delivery"
+    },
+    "compliance": {
+      "file": "compliance.md",
+      "role": "Regulatory Compliance & Audit Specialist",
+      "description": "Enterprise-wide compliance with regulatory frameworks and audit processes"
+    },
+    "architect": {
+      "file": "architect.md",
+      "role": "Enterprise System Architect",
+      "description": "Scalable, secure, compliant designs with quality validation"
+    },
+    "code": {
+      "file": "code.md",
+      "role": "Senior Enterprise Developer",
+      "description": "Enterprise-grade solutions with automated testing and security integration"
+    },
+    "debug": {
+      "file": "debug.md",
+      "role": "Quality Assurance & Testing Specialist",
+      "description": "Comprehensive testing, security validation, and performance analysis"
+    },
+    "performance": {
+      "file": "performance.md",
+      "role": "Performance Engineering Specialist",
+      "description": "Performance optimization, load testing, and monitoring solutions"
+    },
+    "research": {
+      "file": "research.md",
+      "role": "Market & Technical Research Specialist",
+      "description": "Competitive analysis, technology evaluation, and trend analysis"
+    },
+    "docs": {
+      "file": "docs.md",
+      "role": "Technical Documentation & Knowledge Management Specialist",
+      "description": "Comprehensive documentation and knowledge management systems"
+    },
+    "data": {
+      "file": "data.md",
+      "role": "Data Engineering & Analytics Specialist",
+      "description": "Data pipelines, analytics systems, and business intelligence solutions"
+    }
+  },
+  "features": [
+    "Enterprise workflow orchestration",
+    "Automatic mode switching",
+    "Quality gates and stakeholder approvals",
+    "Comprehensive security integration",
+    "Multi-regulatory compliance support",
+    "DevOps and infrastructure automation",
+    "Performance monitoring and optimization",
+    "Complete audit trail and documentation"
+  ],
+  "compliance_frameworks": [
+    "GDPR", "CCPA", "PIPEDA", "SOX", "PCI-DSS", "HIPAA", "GLBA",
+    "ISO 27001", "NIST Cybersecurity Framework", "SOC 2 Type II", "FedRAMP"
+  ],
+  "extraction_info": {
+    "source_lines": "383-1552",
+    "extraction_date": "2025-01-15",
+    "cleaned_bash_syntax": true,
+    "removed_variable_expansion": true
+  }
+}

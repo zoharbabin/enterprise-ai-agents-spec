@@ -1,0 +1,195 @@
+# Enterprise Roo Code Security Guard Rails
+# Comprehensive security, privacy, and compliance exclusions
+
+# Credentials and Secrets (Critical Security)
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cert
+secrets/
+credentials/
+auth/
+*.secret
+api-keys/
+tokens/
+certificates/
+private-keys/
+.aws/credentials
+.gcp/credentials
+.azure/credentials
+
+# Enterprise Authentication
+kerberos/
+ldap/
+saml/
+oauth/
+*.keystore
+*.truststore
+service-accounts/
+identity/
+
+# Personal and Sensitive Data (GDPR/Privacy)
+personal/
+private/
+confidential/
+*.personal
+*.private
+*.confidential
+sensitive/
+internal/
+pii/
+customer-data/
+user-data/
+
+# Financial and Business Critical
+financial/
+billing/
+payments/
+contracts/
+legal/
+hr/
+payroll/
+*.financial
+*.billing
+
+# Compliance and Audit (Regulatory)
+audit-logs/
+compliance-reports/
+regulatory/
+sox/
+hipaa/
+gdpr/
+pci/
+iso27001/
+
+# Infrastructure Secrets
+terraform.tfstate
+terraform.tfvars
+*.tfvars
+kubernetes-secrets/
+helm-secrets/
+docker-secrets/
+vault/
+consul/
+
+# Database and Cache
+*.db
+*.sqlite
+*.sqlite3
+*.mdb
+database-backups/
+db-dumps/
+cache/
+redis-data/
+mongodb-data/
+
+# System and OS Files
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+*.log
+*.pid
+*.lock
+*.swp
+*.swo
+*~
+core.*
+
+# Development Environment (Personal)
+.vscode/settings.json
+.idea/workspace.xml
+.idea/tasks.xml
+*.sublime-workspace
+.atom/storage/
+
+# Build and Dependencies
+node_modules/
+.npm/
+.yarn/
+.pnpm/
+vendor/
+dist/
+build/
+target/
+out/
+*.o
+*.so
+*.dll
+*.dylib
+*.exe
+*.pyc
+__pycache__/
+.pytest_cache/
+.coverage
+coverage/
+
+# Version Control (Sensitive)
+.git/objects/
+.git/refs/
+.git/logs/
+*.orig
+*.rej
+.gitconfig
+.git-credentials
+
+# Backup Files (Potentially Sensitive)
+backup-*/
+backups/
+*.backup
+*.bak
+*.old
+*~
+*.swp
+
+# Large Media Files (Performance)
+*.iso
+*.dmg
+*.img
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wav
+*.mp3
+*.flac
+
+# AI/ML Models (IP Protection)
+*.model
+*.weights
+*.checkpoint
+*.pkl
+*.joblib
+models/
+checkpoints/
+training-data/
+datasets/
+
+# Enterprise Temporary Files
+temp/
+tmp/
+scratch/
+sandbox/
+test-data/
+mock-data/
+sample-data/
+
+# Monitoring and Logs (Potentially Sensitive)
+logs/
+*.log
+monitoring/
+metrics/
+traces/
+alerts/
+
+# Custom Enterprise Exclusions
+# Add organization-specific patterns below
