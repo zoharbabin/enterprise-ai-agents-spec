@@ -242,7 +242,13 @@ validate_roo_structure() {
 # Network connectivity and download functions
 test_local_templates() {
   echo "🔍 Checking for local templates..."
-  local script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+  local script_dir
+  if [[ -n "${BASH_SOURCE[0]:-}" ]]; then
+    script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+  else
+    # When piped from curl, use current directory
+    script_dir="$(pwd)"
+  fi
   local local_templates_dir="$script_dir/templates"
   local local_instructions_dir="$script_dir/instruction-templates"
   
