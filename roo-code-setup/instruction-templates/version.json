@@ -1,8 +1,9 @@
 {
-  "version": "4.0.0",
+  "version": "4.1.0",
   "name": "Enterprise Roo Code Instruction Templates",
   "description": "Comprehensive enterprise mode instruction templates extracted from enterprise_roo_setup.sh",
   "created": "2025-01-15",
+  "updated": "2025-07-16",
   "source": "enterprise_roo_setup.sh",
   "modes": {
     "orchestrator": {

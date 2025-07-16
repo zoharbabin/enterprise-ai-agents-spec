@@ -5,7 +5,7 @@
 
 set -uo pipefail
 
-SCRIPT_VERSION="4.0.0"
+SCRIPT_VERSION="4.1.0"
 TARGET_DIR="${1:-.}"
 ROO_DIR="$TARGET_DIR/.roo"
 ROOMODES_FILE="$TARGET_DIR/.roomodes.yaml"
@@ -599,20 +599,15 @@ EOF
 }
 
 setup_project_structure() {
-  echo "🏗️  Setting up project structure..."
+  echo "🏗️  Setting up Roo Code structure..."
   
-  # Create comprehensive enterprise directory structure
+  # Create only Roo Code required directories
   mkdir -p "$ROO_DIR"
   for mode in "${SELECTED_MODES[@]}"; do
     mkdir -p "$ROO_DIR/rules-$mode"
   done
   
-  mkdir -p "$TARGET_DIR"/{docs,src,tests,infrastructure,security,compliance,performance,data}
-  mkdir -p "$TARGET_DIR/docs"/{architecture,api,user-guides,compliance,security}
-  mkdir -p "$TARGET_DIR/infrastructure"/{terraform,kubernetes,monitoring,ci-cd}
-  mkdir -p "$TARGET_DIR/security"/{policies,scans,audits,compliance}
-  
-  echo "✅ Project structure created"
+  echo "✅ Roo Code structure created"
 }
 
 download_all_templates() {
@@ -798,7 +793,7 @@ echo "   • ${#SELECTED_MODES[@]} Specialized Enterprise Modes"
 echo "   • Automatic Workflow Orchestration"
 echo "   • Quality Gates & Stakeholder Approvals"
 echo "   • Comprehensive Security Framework"
-echo "   • Enterprise Directory Structure"
+echo "   • Roo Code Configuration Structure"
 echo ""
 echo "📁 Target Directory: $TARGET_DIR"
 echo "📋 Configuration: $ROOMODES_FILE"
@@ -833,7 +828,7 @@ validate_yaml_syntax "$ROOMODES_FILE"
 echo ""
 echo "📋 Setup Summary:"
 echo "   • Modes: ${#SELECTED_MODES[@]} enterprise modes configured"
-echo "   • Structure: Full enterprise directory structure created"
+echo "   • Structure: Roo Code configuration structure created"
 echo "   • Templates: All configuration files in place"
 
 echo "[$(date +'%Y-%m-%d %H:%M:%S')] [SUCCESS] Enterprise Roo Code Setup completed successfully"

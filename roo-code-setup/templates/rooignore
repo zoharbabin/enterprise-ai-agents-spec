@@ -1,195 +1,56 @@
 # Enterprise Roo Code Security Guard Rails
-# Comprehensive security, privacy, and compliance exclusions
+# MINIMAL exclusions for enterprise AI agents - only actual secrets excluded
+# AI agents need full project access for effective analysis and validation
 
-# Credentials and Secrets (Critical Security)
+# ACTUAL SECRETS AND CREDENTIALS ONLY
 .env
 .env.*
 *.key
 *.pem
 *.p12
 *.pfx
-*.crt
-*.cert
 secrets/
 credentials/
-auth/
 *.secret
 api-keys/
 tokens/
-certificates/
 private-keys/
 .aws/credentials
 .gcp/credentials
 .azure/credentials
 
-# Enterprise Authentication
-kerberos/
-ldap/
-saml/
-oauth/
-*.keystore
-*.truststore
-service-accounts/
-identity/
-
-# Personal and Sensitive Data (GDPR/Privacy)
-personal/
-private/
-confidential/
-*.personal
-*.private
-*.confidential
-sensitive/
-internal/
-pii/
-customer-data/
-user-data/
-
-# Financial and Business Critical
-financial/
-billing/
-payments/
-contracts/
-legal/
-hr/
-payroll/
-*.financial
-*.billing
-
-# Compliance and Audit (Regulatory)
-audit-logs/
-compliance-reports/
-regulatory/
-sox/
-hipaa/
-gdpr/
-pci/
-iso27001/
-
-# Infrastructure Secrets
+# Infrastructure Secrets (not configs)
 terraform.tfstate
-terraform.tfvars
 *.tfvars
 kubernetes-secrets/
 helm-secrets/
 docker-secrets/
 vault/
-consul/
 
-# Database and Cache
-*.db
-*.sqlite
-*.sqlite3
-*.mdb
-database-backups/
-db-dumps/
-cache/
-redis-data/
-mongodb-data/
-
-# System and OS Files
+# OS Noise Files Only
 .DS_Store
 Thumbs.db
-*.tmp
-*.temp
-*.log
-*.pid
-*.lock
 *.swp
 *.swo
 *~
-core.*
 
-# Development Environment (Personal)
-.vscode/settings.json
-.idea/workspace.xml
-.idea/tasks.xml
-*.sublime-workspace
-.atom/storage/
-
-# Build and Dependencies
-node_modules/
-.npm/
-.yarn/
-.pnpm/
-vendor/
-dist/
-build/
-target/
-out/
-*.o
-*.so
-*.dll
-*.dylib
-*.exe
-*.pyc
-__pycache__/
-.pytest_cache/
-.coverage
-coverage/
-
-# Version Control (Sensitive)
+# Git Internal (not configs or logs)
 .git/objects/
 .git/refs/
-.git/logs/
-*.orig
-*.rej
 .gitconfig
 .git-credentials
 
-# Backup Files (Potentially Sensitive)
-backup-*/
-backups/
-*.backup
-*.bak
-*.old
-*~
-*.swp
+# NOTE: Enterprise AI agents need access to EVERYTHING else including:
+# - All build artifacts (dist/, build/, target/, *.exe, *.dll, etc.) - to verify builds
+# - All logs and monitoring data (logs/, *.log, monitoring/, metrics/) - for analysis
+# - All test data and coverage (test-data/, coverage/, .pytest_cache/) - for validation
+# - All databases and caches (*.db, *.sqlite, cache/) - for data analysis
+# - All configuration files - for security and compliance review
+# - All documentation and reports - for completeness verification
+# - All temporary and scratch files - for debugging and analysis
+# - All dependencies (node_modules/, vendor/) - for security scanning
+# - All media files - for content analysis if needed
+# - All compliance and audit files - for regulatory validation
 
-# Large Media Files (Performance)
-*.iso
-*.dmg
-*.img
-*.zip
-*.tar.gz
-*.tar.bz2
-*.rar
-*.7z
-*.mp4
-*.avi
-*.mov
-*.mkv
-*.wav
-*.mp3
-*.flac
-
-# AI/ML Models (IP Protection)
-*.model
-*.weights
-*.checkpoint
-*.pkl
-*.joblib
-models/
-checkpoints/
-training-data/
-datasets/
-
-# Enterprise Temporary Files
-temp/
-tmp/
-scratch/
-sandbox/
-test-data/
-mock-data/
-sample-data/
-
-# Monitoring and Logs (Potentially Sensitive)
-logs/
-*.log
-monitoring/
-metrics/
-traces/
-alerts/
-
-# Custom Enterprise Exclusions
-# Add organization-specific patterns below
+# Custom Enterprise Exclusions (SECRETS ONLY)
+# Add organization-specific credential patterns below
