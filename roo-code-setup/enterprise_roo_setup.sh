@@ -8,7 +8,7 @@ set -uo pipefail
 SCRIPT_VERSION="4.1.0"
 TARGET_DIR="${1:-.}"
 ROO_DIR="$TARGET_DIR/.roo"
-ROOMODES_FILE="$TARGET_DIR/.roomodes.yaml"
+ROOMODES_FILE="$TARGET_DIR/.roomodes"
 ROOIGNORE_FILE="$TARGET_DIR/.rooignore"
 README_FILE="$TARGET_DIR/README.md"
 
@@ -168,7 +168,7 @@ parse_arguments "$@"
 
 # Update target directory paths
 ROO_DIR="$TARGET_DIR/.roo"
-ROOMODES_FILE="$TARGET_DIR/.roomodes.yaml"
+ROOMODES_FILE="$TARGET_DIR/.roomodes"
 ROOIGNORE_FILE="$TARGET_DIR/.rooignore"
 README_FILE="$TARGET_DIR/README.md"
 DOWNLOAD_DIR="$ROO_DIR/.downloads"
@@ -212,7 +212,7 @@ validate_roo_structure() {
   
   # Check required files exist
   if [[ ! -f "$ROOMODES_FILE" ]]; then
-    echo "❌ .roomodes.yaml not created"
+    echo "❌ .roomodes not created"
     return 1
   fi
   
@@ -259,7 +259,7 @@ test_local_templates() {
   echo "   Script directory: $script_dir"
   echo "   Looking for templates at: $local_templates_dir"
   
-  if [[ -d "$local_templates_dir" ]] && [[ -f "$local_templates_dir/roomodes.yaml" ]]; then
+  if [[ -d "$local_templates_dir" ]] && [[ -f "$local_templates_dir/roomodes" ]]; then
     echo "✅ Local templates found at: $local_templates_dir"
     LOCAL_TEMPLATES_DIR="$local_templates_dir"
     LOCAL_INSTRUCTIONS_DIR="$local_instructions_dir"
@@ -287,8 +287,8 @@ test_network_connectivity() {
   
   # Test actual template repository URLs - GitHub Pages first, then raw.githubusercontent.com
   echo "🔍 Testing template repository connectivity..."
-  local test_url="$TEMPLATES_URL/roomodes.yaml"
-  local fallback_url="$TEMPLATES_URL_FALLBACK/roomodes.yaml"
+  local test_url="$TEMPLATES_URL/roomodes"
+  local fallback_url="$TEMPLATES_URL_FALLBACK/roomodes"
   
   # Try GitHub Pages first (no caching issues)
   if curl -s --head --connect-timeout 10 --max-time 15 "$test_url" | grep -q "200"; then
@@ -584,7 +584,7 @@ This project is configured with enterprise Roo Code setup featuring automatic wo
 1. **Install Roo Code Extension**
    - Install the Roo Code VS Code extension
    - Open your project in VS Code
-   - The extension will automatically detect the .roomodes.yaml configuration
+   - The extension will automatically detect the .roomodes configuration
 
 2. **Enable Auto-Approval (Optional)**
    - Configure Roo Code to auto-approve tool actions for seamless workflow
@@ -671,7 +671,7 @@ setup_local_templates() {
   local total_templates=3
   
   # Copy main template files
-  if copy_local_template "roomodes.yaml" "$ROOMODES_FILE" ".roomodes.yaml template"; then
+  if copy_local_template "roomodes" "$ROOMODES_FILE" ".roomodes template"; then
     templates_copied=$((templates_copied + 1))
   else
     create_fallback_roomodes
@@ -736,7 +736,7 @@ setup_github_templates() {
   local templates_downloaded=0
   local total_templates=3
   
-  if download_template_file "roomodes.yaml" "$ROOMODES_FILE" ".roomodes.yaml template"; then
+  if download_template_file "roomodes" "$ROOMODES_FILE" ".roomodes template"; then
     templates_downloaded=$((templates_downloaded + 1))
   else
     create_fallback_roomodes
