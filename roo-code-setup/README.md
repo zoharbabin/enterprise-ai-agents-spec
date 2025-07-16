@@ -14,29 +14,45 @@ A comprehensive enterprise-grade setup script that creates a production-ready Ro
 
 ## 🚀 Quick Start
 
-### One-Command Setup
+### One-Command Setup (Recommended - GitHub Pages)
 ```bash
-# Clone and set up enterprise environment in 30 seconds
+# Download and set up enterprise environment directly from GitHub Pages (no caching issues)
+curl -sSL https://zoharbabin.github.io/enterprise-ai-agents-spec/enterprise_roo_setup.sh | bash -s -- ./my-enterprise-project
+```
+
+### Alternative Setup Methods
+```bash
+# Clone repository method
 git clone https://github.com/zoharbabin/enterprise-ai-agents-spec.git
 cd enterprise-ai-agents-spec/roo-code-setup/
 ./enterprise_roo_setup.sh ./my-enterprise-project
+
+# Direct download from GitHub (may have caching delays)
+curl -sSL https://raw.githubusercontent.com/zoharbabin/enterprise-ai-agents-spec/main/roo-code-setup/enterprise_roo_setup.sh | bash -s -- ./my-enterprise-project
 ```
 
 ### Command Options
 ```bash
-# Install all 12 enterprise modes (default)
+# Install all 12 enterprise modes (default) - GitHub Pages
+curl -sSL https://zoharbabin.github.io/enterprise-ai-agents-spec/enterprise_roo_setup.sh | bash -s -- ./my-project
+
+# Install specific modes - GitHub Pages
+curl -sSL https://zoharbabin.github.io/enterprise-ai-agents-spec/enterprise_roo_setup.sh | bash -s -- --modes orchestrator,architect,code,security ./my-project
+
+# Interactive mode selection - GitHub Pages
+curl -sSL https://zoharbabin.github.io/enterprise-ai-agents-spec/enterprise_roo_setup.sh | bash -s -- --interactive ./my-project
+
+# Use local templates only (offline) - GitHub Pages
+curl -sSL https://zoharbabin.github.io/enterprise-ai-agents-spec/enterprise_roo_setup.sh | bash -s -- --local ./my-project
+
+# List all available modes - GitHub Pages
+curl -sSL https://zoharbabin.github.io/enterprise-ai-agents-spec/enterprise_roo_setup.sh | bash -s -- --list
+
+# Local execution (if repository is cloned)
 ./enterprise_roo_setup.sh ./my-project
-
-# Install specific modes
 ./enterprise_roo_setup.sh --modes orchestrator,architect,code,security ./my-project
-
-# Interactive mode selection
 ./enterprise_roo_setup.sh --interactive ./my-project
-
-# Use local templates only (offline)
 ./enterprise_roo_setup.sh --local ./my-project
-
-# List all available modes
 ./enterprise_roo_setup.sh --list
 ```
 
@@ -269,6 +285,27 @@ sudo chown -R $(whoami) ./target-directory
 - **Enterprise Structure**: Review project directory structure above
 - **Version Information**: Check [`instruction-templates/version.json`](roo-code-setup/instruction-templates/version.json:1)
 
+## 🌐 GitHub Pages Deployment
+
+### Why GitHub Pages?
+The enterprise setup now uses **GitHub Pages deployment** to solve caching issues with `raw.githubusercontent.com`:
+
+- **✅ Immediate Updates**: No CDN caching delays (was 5-60 minutes)
+- **✅ Reliable Access**: Professional hosting with 99.9% uptime
+- **✅ Automatic Deployment**: GitHub Actions automatically deploy on every change
+- **✅ Fallback Support**: Script automatically falls back to raw.githubusercontent.com if needed
+
+### Deployment URLs
+- **Primary (Recommended)**: `https://zoharbabin.github.io/enterprise-ai-agents-spec/enterprise_roo_setup.sh`
+- **Fallback**: `https://raw.githubusercontent.com/zoharbabin/enterprise-ai-agents-spec/main/roo-code-setup/enterprise_roo_setup.sh`
+- **Landing Page**: `https://zoharbabin.github.io/enterprise-ai-agents-spec/`
+
+### How It Works
+1. **Push to GitHub**: Changes committed to main branch
+2. **GitHub Actions**: Automatic deployment workflow triggers
+3. **GitHub Pages**: Script immediately available with no caching
+4. **Smart Fallback**: Script tries GitHub Pages first, then raw GitHub if needed
+
 ## 🤝 Contributing
 
 ### Development Setup
@@ -295,7 +332,11 @@ cd enterprise-ai-agents-spec/roo-code-setup/
 ## 🎯 Get Started Now
 
 ```bash
-# Enterprise-ready setup in 30 seconds
+# Enterprise-ready setup in 30 seconds (GitHub Pages - no caching issues)
+curl -sSL https://zoharbabin.github.io/enterprise-ai-agents-spec/enterprise_roo_setup.sh | bash -s -- ./my-enterprise-project
+code ./my-enterprise-project
+
+# Alternative: Clone repository method
 git clone https://github.com/zoharbabin/enterprise-ai-agents-spec.git
 cd enterprise-ai-agents-spec/roo-code-setup/
 ./enterprise_roo_setup.sh ./my-enterprise-project
