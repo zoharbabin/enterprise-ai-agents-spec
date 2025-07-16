@@ -5,6 +5,20 @@ All notable changes to the Enterprise AI Agents Specification will be documented
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.1.1] - 2025-07-16
+
+### Fixed
+- **CRITICAL**: Fixed `.roomodes.yaml` filename to `.roomodes` (without extension)
+  - Roo Code expects configuration file to be named `.roomodes` without any extension
+  - This was the root cause of custom modes not loading in Roo Code
+  - Updated all script references and renamed template file accordingly
+  - Custom modes now load correctly in Roo Code extension
+
+### Changed
+- Updated template filename from `roomodes.yaml` to `roomodes`
+- Updated all script references to use correct filename
+- Fixed validation and error messages to reflect correct filename
+
 ## [4.1.0] - 2025-07-16
 
 ### Fixed

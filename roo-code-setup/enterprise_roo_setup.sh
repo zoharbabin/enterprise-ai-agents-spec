@@ -5,7 +5,7 @@
 
 set -uo pipefail
 
-SCRIPT_VERSION="4.1.0"
+SCRIPT_VERSION="4.1.1"
 TARGET_DIR="${1:-.}"
 ROO_DIR="$TARGET_DIR/.roo"
 ROOMODES_FILE="$TARGET_DIR/.roomodes"
