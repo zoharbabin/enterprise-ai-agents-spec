@@ -153,7 +153,7 @@ interactive_mode_selection() {
     done
   else
     IFS=',' read -ra indices <<< "$selection"
-    for index in "${indices[@]}"; do
+    for index in "${indices[@]:-}"; do
       if [[ "$index" =~ ^[0-9]+$ ]] && [[ "$index" -ge 1 ]] && [[ "$index" -le ${#AVAILABLE_MODES[@]} ]]; then
         mode_info="${AVAILABLE_MODES[$((index-1))]}"
         IFS=':' read -r slug name desc <<< "$mode_info"
