@@ -291,14 +291,14 @@ test_network_connectivity() {
   local fallback_url="$TEMPLATES_URL_FALLBACK/roomodes.yaml"
   
   # Try GitHub Pages first (no caching issues)
-  if curl -s --head --connect-timeout 10 --max-time 15 "$test_url" | grep -q "200 OK"; then
+  if curl -s --head --connect-timeout 10 --max-time 15 "$test_url" | grep -q "200"; then
     echo "✅ Template repository accessible via GitHub Pages"
     return 0
   fi
   
   # Try raw.githubusercontent.com as fallback
   echo "🔄 Trying fallback URL..."
-  if curl -s --head --connect-timeout 10 --max-time 15 "$fallback_url" | grep -q "200 OK"; then
+  if curl -s --head --connect-timeout 10 --max-time 15 "$fallback_url" | grep -q "200"; then
     echo "✅ Template repository accessible via GitHub raw (fallback)"
     # Update URLs to use fallback
     TEMPLATES_URL="$TEMPLATES_URL_FALLBACK"
