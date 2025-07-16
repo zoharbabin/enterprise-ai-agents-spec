@@ -7,7 +7,7 @@ customModes:
     name: "🪃 Orchestrator"
     description: "Enterprise project coordinator with automatic workflow management"
     roleDefinition: "Enterprise project coordinator managing full development lifecycle with automatic mode switching, quality gates, stakeholder communication, and comprehensive project oversight across all enterprise functions."
-    groups: ["read", "edit", "command", "mcp"]
+    groups: ["read"]
     customInstructions: ".roo/rules-orchestrator/01-instructions.md"
     
   - slug: architect
@@ -44,7 +44,7 @@ customModes:
     description: "Cybersecurity specialist with automated scanning and compliance"
     roleDefinition: "Cybersecurity specialist conducting threat modeling, security audits, vulnerability assessments, compliance validation, and automated security scanning with integration across all development phases."
     groups: ["read", "edit", "command", "mcp"]
-    fileRegex: "^(security/|docs/security/|compliance/|.*\\.(md|json|yaml|yml|tf|dockerfile))$"
+    fileRegex: "^(security/|docs/security/|compliance/|src/|lib/|.*\\.(md|json|yaml|yml|tf|dockerfile|js|ts|py|java|go|rs|php|rb|c|cpp|h|hpp|cs|vb|sql|sh|bat|ps1))$"
     customInstructions: ".roo/rules-security/01-instructions.md"
     whenToUse: "When security analysis, threat modeling, vulnerability assessment, or compliance validation is required"
     
@@ -61,20 +61,25 @@ customModes:
     description: "Product management with stakeholder coordination"
     roleDefinition: "Product management specialist defining requirements, user stories, acceptance criteria, coordinating stakeholder feedback, managing product roadmaps, and ensuring business value delivery."
     groups: ["read", "edit", "command", "mcp"]
+    fileRegex: "^(product/|docs/product/|requirements/|specs/|.*\\.(md|json|yaml|yml))$"
     customInstructions: ".roo/rules-product/01-instructions.md"
+    whenToUse: "When product strategy, requirements definition, or stakeholder coordination is required"
     
   - slug: compliance
     name: "⚖️ Compliance"
     description: "Regulatory compliance specialist with automated auditing"
     roleDefinition: "Regulatory compliance specialist ensuring GDPR, SOC2, HIPAA, PCI-DSS compliance with automated audit trails, policy enforcement, and regulatory reporting across all enterprise functions."
     groups: ["read", "edit", "command", "mcp"]
+    fileRegex: "^(compliance/|audit/|policies/|docs/compliance/|.*\\.(md|json|yaml|yml|pdf))$"
     customInstructions: ".roo/rules-compliance/01-instructions.md"
+    whenToUse: "When regulatory compliance validation, audit preparation, or policy management is required"
     
   - slug: research
     name: "🔬 Research"
     description: "Market and technical research specialist"
     roleDefinition: "Market and technical research specialist conducting competitive analysis, technology evaluation, user research, trend analysis, and providing data-driven insights for strategic decision making."
-    groups: ["read", "browser", "command", "mcp"]
+    groups: ["read", "edit", "browser", "command", "mcp"]
+    fileRegex: "^(research/|docs/research/|reports/|analysis/|.*\\.(md|json|csv|xlsx))$"
     customInstructions: ".roo/rules-research/01-instructions.md"
     whenToUse: "When market research, competitive analysis, technology evaluation, or trend analysis is required"
 
@@ -84,7 +89,9 @@ customModes:
     description: "Technical documentation specialist with automated generation"
     roleDefinition: "Technical documentation specialist creating comprehensive user guides, API documentation, architecture documentation, compliance documentation, and knowledge management systems with automated documentation generation."
     groups: ["read", "edit", "command", "mcp"]
+    fileRegex: "^(docs/|documentation/|.*\\.(md|rst|txt|html|pdf))$"
     customInstructions: ".roo/rules-docs/01-instructions.md"
+    whenToUse: "When technical documentation, user guides, or knowledge management is required"
     
   - slug: data
     name: "📈 Data"
