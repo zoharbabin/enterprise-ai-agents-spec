@@ -446,7 +446,7 @@ download_instruction_template() {
   # Try to download the template
   if download_with_retry "$template_url" "$temp_file" "$mode mode template"; then
     # Validate the downloaded file
-    if [[ -s "$temp_file" ]] && grep -q "# .*$mode.*Mode Instructions" "$temp_file" 2>/dev/null; then
+    if [[ -s "$temp_file" ]] && (grep -q "# .*Mode Instructions" "$temp_file" 2>/dev/null || grep -q "# Enterprise.*Mode Instructions" "$temp_file" 2>/dev/null); then
       mv "$temp_file" "$instructions_file"
       echo "✅ Successfully installed $mode mode instructions"
       return 0
