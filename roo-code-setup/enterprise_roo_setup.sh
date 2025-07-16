@@ -233,8 +233,8 @@ validate_roo_structure() {
       echo "❌ Mode directory .roo/rules-$mode not created"
       return 1
     fi
-    if [[ ! -f "$ROO_DIR/rules-$mode/instructions.md" ]]; then
-      echo "❌ Instructions file .roo/rules-$mode/instructions.md not created"
+    if [[ ! -f "$ROO_DIR/rules-$mode/01-instructions.md" ]]; then
+      echo "❌ Instructions file .roo/rules-$mode/01-instructions.md not created"
       return 1
     fi
   done
@@ -368,7 +368,7 @@ copy_local_template() {
 copy_local_instruction_template() {
   local mode="$1"
   local mode_dir="$ROO_DIR/rules-$mode"
-  local instructions_file="$mode_dir/instructions.md"
+  local instructions_file="$mode_dir/01-instructions.md"
   local source_file="$LOCAL_INSTRUCTIONS_DIR/${mode}.md"
   
   mkdir -p "$mode_dir"
@@ -387,7 +387,7 @@ copy_local_instruction_template() {
 create_minimal_fallback_template() {
   local mode="$1"
   local mode_dir="$ROO_DIR/rules-$mode"
-  local instructions_file="$mode_dir/instructions.md"
+  local instructions_file="$mode_dir/01-instructions.md"
   local mode_title
   
   # Capitalize first letter of mode name
@@ -438,7 +438,7 @@ download_instruction_template() {
   local mode="$1"
   local template_url="$INSTRUCTIONS_URL/${mode}.md"
   local mode_dir="$ROO_DIR/rules-$mode"
-  local instructions_file="$mode_dir/instructions.md"
+  local instructions_file="$mode_dir/01-instructions.md"
   local temp_file="$DOWNLOAD_DIR/${mode}.md.tmp"
   
   mkdir -p "$mode_dir" "$DOWNLOAD_DIR"
@@ -505,7 +505,7 @@ EOF
     description: "$desc"
     roleDefinition: "$desc with enterprise-grade quality and coordination capabilities."
     groups: ["read", "edit", "command", "mcp"]
-    customInstructions: ".roo/rules-$slug/instructions.md"
+    customInstructions: ".roo/rules-$slug/01-instructions.md"
 EOF
         if [[ "$slug" == "security" ]]; then
           cat >> "$ROOMODES_FILE" << EOF

@@ -8,28 +8,28 @@ customModes:
     description: "Enterprise project coordinator with automatic workflow management"
     roleDefinition: "Enterprise project coordinator managing full development lifecycle with automatic mode switching, quality gates, stakeholder communication, and comprehensive project oversight across all enterprise functions."
     groups: ["read", "edit", "command", "mcp"]
-    customInstructions: ".roo/rules-orchestrator/instructions.md"
+    customInstructions: ".roo/rules-orchestrator/01-instructions.md"
     
   - slug: architect
     name: "🏗️ Architect"
     description: "Enterprise system architect with automated quality validation"
     roleDefinition: "Enterprise system architect creating scalable, secure, compliant designs with automatic quality validation, stakeholder approval processes, and seamless handoffs to implementation teams."
     groups: ["read", "edit", "command", "mcp"]
-    customInstructions: ".roo/rules-architect/instructions.md"
+    customInstructions: ".roo/rules-architect/01-instructions.md"
     
   - slug: code
     name: "💻 Code"
     description: "Senior developer with automated testing and security integration"
     roleDefinition: "Senior developer implementing enterprise-grade solutions with automated testing, security scanning, code review processes, and integration with DevOps pipelines."
     groups: ["read", "edit", "command", "mcp"]
-    customInstructions: ".roo/rules-code/instructions.md"
+    customInstructions: ".roo/rules-code/01-instructions.md"
     
   - slug: debug
     name: "🪲 Debug"
     description: "QA specialist with comprehensive automated testing"
     roleDefinition: "Quality assurance specialist performing comprehensive testing, security validation, performance analysis, and automated reporting with integration to DevOps and compliance systems."
     groups: ["read", "edit", "command", "mcp"]
-    customInstructions: ".roo/rules-debug/instructions.md"
+    customInstructions: ".roo/rules-debug/01-instructions.md"
 
   # Enterprise Infrastructure & Operations
   - slug: devops
@@ -37,7 +37,7 @@ customModes:
     description: "Infrastructure and deployment automation specialist"
     roleDefinition: "Infrastructure and deployment specialist managing CI/CD pipelines, containerization, cloud infrastructure, monitoring systems, and automated deployment processes with enterprise-grade security and compliance."
     groups: ["read", "edit", "command", "mcp"]
-    customInstructions: ".roo/rules-devops/instructions.md"
+    customInstructions: ".roo/rules-devops/01-instructions.md"
     
   - slug: security
     name: "🛡️ Security"
@@ -45,7 +45,7 @@ customModes:
     roleDefinition: "Cybersecurity specialist conducting threat modeling, security audits, vulnerability assessments, compliance validation, and automated security scanning with integration across all development phases."
     groups: ["read", "edit", "command", "mcp"]
     fileRegex: "^(security/|docs/security/|compliance/|.*\\.(md|json|yaml|yml|tf|dockerfile))$"
-    customInstructions: ".roo/rules-security/instructions.md"
+    customInstructions: ".roo/rules-security/01-instructions.md"
     whenToUse: "When security analysis, threat modeling, vulnerability assessment, or compliance validation is required"
     
   - slug: performance
@@ -53,7 +53,7 @@ customModes:
     description: "Performance engineering specialist with automated monitoring"
     roleDefinition: "Performance engineering specialist optimizing system performance, conducting load testing, implementing monitoring solutions, and ensuring scalability with automated performance validation and reporting."
     groups: ["read", "edit", "command", "mcp"]
-    customInstructions: ".roo/rules-performance/instructions.md"
+    customInstructions: ".roo/rules-performance/01-instructions.md"
 
   # Enterprise Business & Compliance
   - slug: product
@@ -61,21 +61,21 @@ customModes:
     description: "Product management with stakeholder coordination"
     roleDefinition: "Product management specialist defining requirements, user stories, acceptance criteria, coordinating stakeholder feedback, managing product roadmaps, and ensuring business value delivery."
     groups: ["read", "edit", "command", "mcp"]
-    customInstructions: ".roo/rules-product/instructions.md"
+    customInstructions: ".roo/rules-product/01-instructions.md"
     
   - slug: compliance
     name: "⚖️ Compliance"
     description: "Regulatory compliance specialist with automated auditing"
     roleDefinition: "Regulatory compliance specialist ensuring GDPR, SOC2, HIPAA, PCI-DSS compliance with automated audit trails, policy enforcement, and regulatory reporting across all enterprise functions."
     groups: ["read", "edit", "command", "mcp"]
-    customInstructions: ".roo/rules-compliance/instructions.md"
+    customInstructions: ".roo/rules-compliance/01-instructions.md"
     
   - slug: research
     name: "🔬 Research"
     description: "Market and technical research specialist"
     roleDefinition: "Market and technical research specialist conducting competitive analysis, technology evaluation, user research, trend analysis, and providing data-driven insights for strategic decision making."
     groups: ["read", "browser", "command", "mcp"]
-    customInstructions: ".roo/rules-research/instructions.md"
+    customInstructions: ".roo/rules-research/01-instructions.md"
     whenToUse: "When market research, competitive analysis, technology evaluation, or trend analysis is required"
 
   # Enterprise Documentation & Data
@@ -84,11 +84,11 @@ customModes:
     description: "Technical documentation specialist with automated generation"
     roleDefinition: "Technical documentation specialist creating comprehensive user guides, API documentation, architecture documentation, compliance documentation, and knowledge management systems with automated documentation generation."
     groups: ["read", "edit", "command", "mcp"]
-    customInstructions: ".roo/rules-docs/instructions.md"
+    customInstructions: ".roo/rules-docs/01-instructions.md"
     
   - slug: data
     name: "📈 Data"
     description: "Data engineering specialist with automated analytics"
     roleDefinition: "Data engineering specialist designing data pipelines, analytics systems, business intelligence solutions, data governance frameworks, and automated reporting with enterprise-grade security and compliance."
     groups: ["read", "edit", "command", "mcp"]
-    customInstructions: ".roo/rules-data/instructions.md"
+    customInstructions: ".roo/rules-data/01-instructions.md"
