@@ -40,6 +40,10 @@ Thumbs.db
 .gitconfig
 .git-credentials
 
+# Enterprise AI agents need full access to create and manage all business documents
+# including audit logs, compliance reports, strategic intelligence, and executive materials
+# Only actual secrets and credentials are restricted
+
 # NOTE: Enterprise AI agents need access to EVERYTHING else including:
 # - All build artifacts (dist/, build/, target/, *.exe, *.dll, etc.) - to verify builds
 # - All logs and monitoring data (logs/, *.log, monitoring/, metrics/) - for analysis
@@ -50,7 +54,7 @@ Thumbs.db
 # - All temporary and scratch files - for debugging and analysis
 # - All dependencies (node_modules/, vendor/) - for security scanning
 # - All media files - for content analysis if needed
-# - All compliance and audit files - for regulatory validation
+# - Public compliance and audit files - for regulatory validation
 
 # Custom Enterprise Exclusions (SECRETS ONLY)
 # Add organization-specific credential patterns below
