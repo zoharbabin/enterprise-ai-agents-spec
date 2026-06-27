@@ -64,7 +64,7 @@ jobs:
               <h2>🎯 Quick Start</h2>
               <p>Run the enterprise setup script directly from GitHub Pages (no caching issues):</p>
               <div class="command-box">
-                  <code>curl -sSL https://zoharbabin.github.io/enterprise-ai-agents-spec/enterprise_roo_setup.sh | bash -s -- ./my-project</code>
+                  <code>curl -sSL https://zoharbabin.com/enterprise-ai-agents-spec/enterprise_roo_setup.sh | bash -s -- ./my-project</code>
               </div>
 
               <div class="features">
@@ -98,17 +98,17 @@ jobs:
               <h2>📋 Installation Options</h2>
               <div class="command-box">
                   <strong>Install all modes:</strong><br>
-                  <code>curl -sSL https://zoharbabin.github.io/enterprise-ai-agents-spec/enterprise_roo_setup.sh | bash -s -- ./my-project</code>
+                  <code>curl -sSL https://zoharbabin.com/enterprise-ai-agents-spec/enterprise_roo_setup.sh | bash -s -- ./my-project</code>
               </div>
               
               <div class="command-box">
                   <strong>Install specific modes:</strong><br>
-                  <code>curl -sSL https://zoharbabin.github.io/enterprise-ai-agents-spec/enterprise_roo_setup.sh | bash -s -- -m orchestrator,code,security ./my-project</code>
+                  <code>curl -sSL https://zoharbabin.com/enterprise-ai-agents-spec/enterprise_roo_setup.sh | bash -s -- -m orchestrator,code,security ./my-project</code>
               </div>
 
               <div class="command-box">
                   <strong>Interactive mode selection:</strong><br>
-                  <code>curl -sSL https://zoharbabin.github.io/enterprise-ai-agents-spec/enterprise_roo_setup.sh | bash -s -- -i ./my-project</code>
+                  <code>curl -sSL https://zoharbabin.com/enterprise-ai-agents-spec/enterprise_roo_setup.sh | bash -s -- -i ./my-project</code>
               </div>
 
               <h2>🔗 Resources</h2>
