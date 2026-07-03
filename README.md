@@ -1,5 +1,7 @@
 # 🤖 Agentic Enterprise Product Development
 
+Built by [Zohar Babin](https://zoharbabin.com)
+
 ## Build Enterprise-Grade Products Faster, Smarter, with AI Swarms
 
 Imagine building complex, reliable, and compliant enterprise software with the speed and agility of a small startup. This project explores and provides resources for a groundbreaking approach: orchestrating **autonomous swarms of specialized AI agents** to handle the entire product development lifecycle.
