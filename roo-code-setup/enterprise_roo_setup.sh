@@ -13,7 +13,7 @@ ROOIGNORE_FILE="$TARGET_DIR/.rooignore"
 README_FILE="$TARGET_DIR/README.md"
 
 # GitHub Configuration - Using GitHub Pages for immediate updates, raw.githubusercontent.com as fallback
-GITHUB_PAGES_URL="https://zoharbabin.github.io/enterprise-ai-agents-spec"
+GITHUB_PAGES_URL="https://zoharbabin.com/enterprise-ai-agents-spec"
 GITHUB_RAW_URL="https://raw.githubusercontent.com/zoharbabin/enterprise-ai-agents-spec/main/roo-code-setup"
 TEMPLATES_URL="$GITHUB_PAGES_URL/templates"
 INSTRUCTIONS_URL="$GITHUB_PAGES_URL/instruction-templates"
